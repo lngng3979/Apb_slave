@@ -15,7 +15,7 @@ module apbslave(
 	parameter ACCESS= 3'b100;
 	reg [2:0] cur_st,nx_st;
 	reg dev_sel;
-	logic [15:0] mem [0:255];
+	reg [15:0] mem [0:255];
 
 	assign pready = 1'b1;
 	always @(*) begin
