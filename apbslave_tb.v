@@ -82,20 +82,21 @@ module apbslave_tb;
 	paddr = 0 ;
 	pwdata =0;
 	pwrite =0 ;
-	#0.1
+	#0.1;
 	#(`PERIOD *2);
 
 
-	rst =0 ;
+	rst =0;
 	psel =1;
-/*
+	paddr=0;
+	penable=1;
+	pwrite = 1;
 	waitforclk(1);
 	write_data();
-	psel=1;
 	waitforclk(1);
 	read_data();
 	waitforclk(5);
-*/
+/*
 		//write_data();
 	psel =1 ;
         #(`PERIOD ); //setup state
@@ -120,7 +121,7 @@ module apbslave_tb;
 	//read_data();
 	waitforclk(10);
 	
-	/*
+	
 	//write transaction 
 	psel =1 ;
 	#(`PERIOD ); //setup state 
@@ -132,7 +133,7 @@ module apbslave_tb;
 	while (!pready ) 
 	  	#(`PERIOD ); //wait 1 clk 
 
-	*/	
+*/	
 	//psel =0 ;
 	//penable =0 ; 
 	//pwrite  =0 ;
@@ -174,7 +175,7 @@ module apbslave_tb;
 	
 		
 		#(`PERIOD);//wait for one clk
-	*/
+*/
 	$finish ();
 
 	end
